@@ -62,7 +62,6 @@ class ContactController extends Controller
 
         return view('contacts.edit', compact('contact'));
     }
-
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -77,7 +76,6 @@ class ContactController extends Controller
 
         return redirect()->route('contacts.index')->with('success', 'Contact updated successfully.');
     }
-
     public function destroy($id)
     {
         $contact = Contact::findOrFail($id);
